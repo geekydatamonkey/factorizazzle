@@ -48,12 +48,15 @@ var FACTORAZZLE = (function(){
 })();
 
 (function($){
+  var $input = $('#number-to-factorize');
+  var $output = $('.factor-list');
 
-  // $('#number-to-factorize').change(function(){
-  //   console.log('Changed sensed');
-  // });
-
-console.log('Loaded.')
+  $input.keyup(function(){
+    var n = parseInt($(this).val(), 10);
+    $output.each(function(){
+      $(this).html(FACTORAZZLE.generate(n).join(', '));
+    });
+  });
 
 })(jQuery);
 // Main
