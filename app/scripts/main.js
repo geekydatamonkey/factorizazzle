@@ -47,13 +47,15 @@ var FACTORAZZLE = (function(){
 
 })();
 
+(function($){
+
+  // $('#number-to-factorize').change(function(){
+  //   console.log('Changed sensed');
+  // });
+
+console.log('Loaded.')
+
+})(jQuery);
 // Main
-
-  // Returns error on string
-  // var n = 'Forty-two';
-  // var result = FACTORAZZLE.generate(n);
-
-var n = 42;
-FACTORAZZLE.generate(n);
 
 
