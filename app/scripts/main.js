@@ -22,7 +22,12 @@ var FACTORAZZLE = (function(){
     var primes = [],
       candidate;
     
-    // Check if non-negative integer
+    // limit of 11 digit
+    if (n.toString().length > 16) {
+      throw new Error('Number is too large');
+    }
+
+    // Check if positive integer
     if (! ( _isInt(n) && (n > 0))) {
       throw new Error('Number is not a positive integer');
     }
@@ -51,12 +56,24 @@ var FACTORAZZLE = (function(){
   var $input = $('#number-to-factorize');
   var $output = $('.factor-list');
 
+  var updateFactorList = function($input, $output){
+    var n = parseInt($input.val(), 10);
+    try {
+      var factorList = FACTORAZZLE.generate(n);
+      $output.each(function(){
+        $(this).html(factorList.join(', '));
+      });
+    } catch(err) {
+      $output.html(err.message);
+    }
+  };
+
   $input.keyup(function(){
-    var n = parseInt($(this).val(), 10);
-    $output.each(function(){
-      $(this).html(FACTORAZZLE.generate(n).join(', '));
-    });
+    updateFactorList($(this), $output);
   });
+
+  // run on load
+  updateFactorList($input, $output);
 
 })(jQuery);
 // Main

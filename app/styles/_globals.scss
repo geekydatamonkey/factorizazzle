@@ -1,9 +1,17 @@
+* {
+  @include box-sizing(border-box);
+}
+
 body {
-    background: #fff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-    margin: 2em auto;
-    max-width: 960/16 * 1em;
+  margin: 0;
+  background: #fff;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+.container {
+  max-width: 960/16 * 1rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
 }
 
 .browsehappy {

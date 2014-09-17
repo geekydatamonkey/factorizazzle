@@ -36,6 +36,11 @@
             it('returns [2,2,3,5] for 60', function(){
               expect(FACTORAZZLE.generate(60)).toEqual([2,2,3,5]);
             });
+            it('throws an error if the number is larger than 12 digits',function(){
+              expect(function(){
+                FACTORAZZLE.generate(12345678901234567);
+              }).toThrow(new Error('Number is too large'));
+            });
         });
 
     });
