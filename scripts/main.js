@@ -1,0 +1,1 @@
+"use strict";var FACTORAZZLE=function(){var r=function(r){return"number"==typeof r&&r%1===0},e=function(e){var n,o=[];if(!(r(e)&&e>0))throw new Error("Number is not a positive integer");for(n=2;e>=n;n++)for(;e%n===0;)o.push(n),e/=n;return o};return{generate:e}}();!function(){console.log("Loaded.")}(jQuery);
