@@ -3,16 +3,22 @@ header {
   color: $gray;
   h1 {
     font-weight: 200;
-    font-size: 3em;
+    font-size: 2.25rem;
+    word-spacing: -0.33rem;
     margin: 0;
   }
-  .fac {
+  span {
+    font-size: 3rem;
+  }
+  .logo-fac,
+  .logo-zaz {
     color: $red;
   }
-  .tor {
+  .logo-tor,
+  .logo-zle {
     color: $teal;
   }
-  .azzle {
+  .logo-i {
     color: $white;
   }
   p {

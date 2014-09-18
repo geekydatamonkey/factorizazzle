@@ -7,9 +7,9 @@
   var updateFactorList = function($input, $output){
     var n = parseInt($input.val(), 10);
     try {
-      var factorList = FACTORAZZLE.generate(n);
+      var factorList = FACTORIZAZZLE.generate(n);
       $output.each(function(){
-        $(this).html(factorList.join(', '));
+        $(this).html(factorList.join(' &bull; '));
       });
     } catch(err) {
       $output.html(err.message);

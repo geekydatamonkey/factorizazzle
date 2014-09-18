@@ -1,11 +1,11 @@
 /**
-* factorazzle.js
-* Factorazzle generates an array of prime factors
+* factorizazzle.js
+* Factorizazzle generates an array of prime factors
 * given an non-negative integer.
 */
 
 'use strict';
-var FACTORAZZLE = (function(){
+var FACTORIZAZZLE = (function(){
 
   /**
   * checks if a number is an integer
