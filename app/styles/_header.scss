@@ -4,6 +4,7 @@ header {
   h1 {
     font-weight: 200;
     font-size: 3em;
+    margin: 0;
   }
   .fac {
     color: $red;
@@ -13,5 +14,8 @@ header {
   }
   .azzle {
     color: $white;
+  }
+  p {
+    margin: 0;
   }
 }
