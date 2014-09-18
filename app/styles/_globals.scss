@@ -12,8 +12,12 @@ body {
   max-width: 960/16 * 1rem;
   margin: 0 auto;
   padding: 1rem 2rem;
+  @include clearfix;
 }
-
+.col-2 {
+  width: 50%;
+  float: left;
+}
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
