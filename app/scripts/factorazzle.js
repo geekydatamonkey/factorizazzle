@@ -59,11 +59,10 @@ var FACTORAZZLE = (function(){
   /* *
    * Returns an array of prime factors for a given integer.
    */
-  var primeFactorList = function(n) {
+  var generate = function(n) {
     var primes = [],
       factor,
-      startWith = 2
-      ;
+      startWith = 2;
 
     _checkInput(n);
     while (n !== 1) {
@@ -77,7 +76,7 @@ var FACTORAZZLE = (function(){
   
   // public methods
   return {
-    generate: primeFactorList,
+    generate: generate,
   };
 
 })();
