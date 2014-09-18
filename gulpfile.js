@@ -133,7 +133,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
     gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('deploy', ['build'], function () {
+gulp.task('deploy', function () {
     gulp.src("dist/**/*.*")
         .pipe(deploy());
 });
